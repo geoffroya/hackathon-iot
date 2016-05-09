@@ -3,3 +3,9 @@
 /project/.classpath
 /project/.project
 /project/.settings
+/project/save
+/project/targetEclipse/classes/bench
+/project/targetEclipse/classes/default/static
+/project/targetEclipse/classes/default/templates
+/project/targetEclipse/classes/server
+/jdk-8u91-linux-x64.tar.gz

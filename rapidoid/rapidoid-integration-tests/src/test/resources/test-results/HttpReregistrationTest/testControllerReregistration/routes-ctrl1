@@ -1,0 +1,1 @@
+Route GET /inc [segment main]: json(AbcCtrl#inc(Integer x))

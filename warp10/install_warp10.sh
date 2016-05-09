@@ -61,7 +61,7 @@ QUANTUM_VERSION=1.0.12
 
 cd /opt
 #curl -L https://github.com/cityzendata/warp10-quantum/archive/$QUANTUM_VERSION.tar.gz -o ./warp10-quantum-$QUANTUM_VERSION.tar.gz
-wget https://github.com/cityzendata/warp10-quantum/archive/$QUANTUM_VERSION.tar.gz
+wget https://github.com/cityzendata/warp10-quantum/archive/$QUANTUM_VERSION.tar.gz -o warp10-quantum-$QUANTUM_VERSION.tar.gz
 tar xzf warp10-quantum-$QUANTUM_VERSION.tar.gz
 rm warp10-quantum-$QUANTUM_VERSION.tar.gz
 ln -s /opt/warp10-quantum-$QUANTUM_VERSION /opt/quantum
@@ -89,9 +89,18 @@ WARP10_CONF=${WARP10_HOME}/etc/conf-standalone.conf
 #COPY worf.sh ${WARP10_HOME}/bin/worf.sh
 #COPY bashrc /root/.bashrc
 
+cp warp10.start.sh ${WARP10_HOME}/bin/warp10.start.sh
+cp worf.sh ${WARP10_HOME}/bin/worf.sh
+
+
+# TODO => créer un script de start
+#COPY bashrc /root/.bashrc
+
+
+
 # A VOIR
-#warp10.start.sh ${WARP10_HOME}/bin/warp10.start.sh
-#worf.sh ${WARP10_HOME}/bin/worf.sh
+warp10.start.sh ${WARP10_HOME}/bin/warp10.start.sh
+worf.sh ${WARP10_HOME}/bin/worf.sh
 #bashrc /root/.bashrc
 
 #RUN chmod +x ${WARP10_HOME}/bin/*.sh
@@ -104,3 +113,4 @@ WARP10_CONF=${WARP10_HOME}/etc/conf-standalone.conf
 #EXPOSE 8080 8081
 
 #CMD ${WARP10_HOME}/bin/warp10.start.sh
+${WARP10_HOME}/bin/warp10.start.sh

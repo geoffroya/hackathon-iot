@@ -1,0 +1,31 @@
+Rapidoid - Simple. Powerful. Secure. Fast!
+========
+
+# Documentation (examples)
+
+Please visit the official site:
+
+[http://www.rapidoid.org/](http://www.rapidoid.org/)
+
+# Apache License v2
+
+The main distribution of the framework is released under the liberal Apache Public License v2, so it is free to use for both commercial and non-commercial projects.
+
+# Roadmap
+
+* Better documentation
+* URL pattern support
+* SSL support
+* Hot reloading of changed classes
+* Management/admin app for the server
+* Refactor the configuration components
+
+# Contributing
+
+1. Fork (and then `git clone https://github.com/<your-username-here>/rapidoid.git`).
+2. Create a branch (`git checkout -b branch_name`).
+3. Commit your changes (`git commit -am "Description of contribution"`).
+4. Push the branch (`git push origin branch_name`).
+5. Open a Pull Request.
+6. Thank you for your contribution! Wait for a response...
+
