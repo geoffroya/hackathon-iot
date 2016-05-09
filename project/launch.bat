@@ -1,0 +1,1 @@
+"C:\Program Files\Java\jdk1.8.0_60\bin\java" -Xms640m -Xmx640m -server -jar target/iot-1.0.0.jar
