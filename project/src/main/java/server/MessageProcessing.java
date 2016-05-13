@@ -49,6 +49,8 @@ public class MessageProcessing {
 	static Map<Integer, List<Message>> map = new HashMap<>();
 
 	static DateTimeFormatter f = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
+	
+	
 
 	public static Req processMessage(Req req) {
 
@@ -123,11 +125,13 @@ public class MessageProcessing {
 
 			StrBuilder back = new StrBuilder();
 
+			// TODO: récupérer un Set des SensorSynth dans lesquels on a écrit et 
+			// les flusher après la boucle
 			for (Message msg : processingList) {
 				addMessageToRepository(msg);
 				back.append(msg.sensorType).append(";").append(msg.timestamp).append(";").append(msg.value)
 						.append("\n");
-				// TODO : créer buffer
+				SensorData.append(msg);
 			}
 
 			try {
